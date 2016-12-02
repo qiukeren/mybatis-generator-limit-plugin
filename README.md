@@ -1,15 +1,21 @@
 # mybatis-generator-limit-plugin
 A MyBatis Generator plugin for MySQL pagination use limit.
 
-http://xxgblog.com/2016/05/06/mybatis-generator-mysql-pagination/
+Forked and modified from [叉烧包's maven plugin](https://github.com/wucao/mybatis-generator-limit-plugin)
+
+Modified as follows:
+
+* The origin just support xml mapper, does not support annotation java sql provider. Extended it. 
+* Put into maven repository.
+
 ## Usage
 
-Add the plugin `<plugin type="com.xxg.mybatis.plugins.MySQLLimitPlugin"></plugin>` into MyBatis Generator configuration file.
+Add the plugin `<plugin type="com.qiukeke.mybatis.plugins.MySQLLimitPlugin"></plugin>` into MyBatis Generator configuration file.
 
 ```
 <generatorConfiguration>
     <context id="mysqlgenerator" targetRuntime="MyBatis3">
-    	<plugin type="com.xxg.mybatis.plugins.MySQLLimitPlugin"></plugin>
+    	<plugin type="com.qiukeke.mybatis.plugins.MySQLLimitPlugin"></plugin>
     	...
     </context>
 </generatorConfiguration>
@@ -19,14 +25,6 @@ Add the plugin `<plugin type="com.xxg.mybatis.plugins.MySQLLimitPlugin"></plugin
 
 pom.xml
 
-```
-<pluginRepositories>
-	<pluginRepository>
-		<id>mybatis-generator-limit-plugin-mvn-repo</id>
-		<url>https://raw.github.com/wucao/mybatis-generator-limit-plugin/mvn-repo/</url>
-	</pluginRepository>
-</pluginRepositories>
-```
 
 ```
 <build>
@@ -42,7 +40,7 @@ pom.xml
 					<version>5.1.34</version>
 				</dependency>
 				<dependency>
-					<groupId>com.xxg</groupId>
+					<groupId>com.qiukeke</groupId>
 					<artifactId>mybatis-generator-plugin</artifactId>
 					<version>1.0.0</version>
 				</dependency>
@@ -79,4 +77,4 @@ The SQL will be:
 `select ... limit 10`
 
 ### Download
-Jar: https://github.com/wucao/mybatis-generator-limit-plugin/tree/mvn-repo/com/xxg/mybatis-generator-plugin/1.0.0
+
