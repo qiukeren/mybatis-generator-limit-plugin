@@ -1,3 +1,7 @@
+# In all
+
+Use version 1.0.1.
+
 # mybatis-generator-limit-plugin
 A MyBatis Generator plugin for MySQL pagination use limit.
 
@@ -42,7 +46,7 @@ pom.xml
 				<dependency>
 					<groupId>com.qiukeke</groupId>
 					<artifactId>mybatis-generator-plugin</artifactId>
-					<version>1.0.0</version>
+					<version>1.0.1</version>
 				</dependency>
 			</dependencies>
 			<configuration>
@@ -64,8 +68,13 @@ example.setLimit(10); // page size limit
 example.setOffset(20); // offset
 List<Xxx> list = xxxMapper.selectByExample(example);
 ```
-The SQL will be:
+
+If you use xml mapper, the SQL will be:
 `select ... limit 20, 10`
+
+If you use annotation mapper, the SQL will be:
+`select ... limit 10 offset 20`
+
 
 ```
 XxxExample example = new XxxExample();
@@ -73,7 +82,10 @@ XxxExample example = new XxxExample();
 example.setLimit(10); // limit
 List<Xxx> list = xxxMapper.selectByExample(example);
 ```
-The SQL will be:
+If you use xml mapper, the SQL will be:
+`select ... limit 10`
+
+If you use annotation mapper, the SQL will be:
 `select ... limit 10`
 
 ### Download

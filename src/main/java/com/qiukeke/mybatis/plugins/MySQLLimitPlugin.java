@@ -13,7 +13,7 @@ import java.util.List;
 public class MySQLLimitPlugin extends PluginAdapter {
 
     public boolean validate(List<String> list) {
-        return false;
+        return true;
     }
 
     /**
