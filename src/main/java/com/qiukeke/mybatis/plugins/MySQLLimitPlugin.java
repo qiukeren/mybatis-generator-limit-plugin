@@ -106,13 +106,14 @@ public class MySQLLimitPlugin extends PluginAdapter {
         List<String> lines = method.getBodyLines();
         lines.remove(lines.size() - 1);
 
-        String line = "        String tmp = \"\";\n" +
+        String line = "String tmp = \"\";\n" +
             "        if (example != null && example.getLimit() != null) {\n" +
             "            tmp = \" limit \" + example.getLimit().toString();\n" +
             "            if (example.getOffset() != null) {\n" +
             "                tmp = tmp + \" offset \" + example.getOffset().toString();\n" +
             "            }\n" +
-            "        }";
+            "        }\n" +
+            "        return SQL() + tmp;";
         lines.add(line);
 
         return true;
