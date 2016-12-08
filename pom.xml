@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.qiukeke</groupId>
     <artifactId>mybatis-generator-limit-plugin</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 
     <name>mybatis-generator-limit-plugin</name>
     <description>mybatis-generator-limit-plugin is a mybatis generator plugin to add limit,offset.</description>
