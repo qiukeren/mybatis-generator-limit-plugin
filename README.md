@@ -1,6 +1,6 @@
 # In all
 
-Use version 1.0.3.
+Use version 1.0.4.
 
 # mybatis-generator-limit-plugin
 A MyBatis Generator plugin for MySQL pagination use limit.
@@ -46,7 +46,7 @@ pom.xml
 				<dependency>
 					<groupId>com.qiukeke</groupId>
 					<artifactId>mybatis-generator-plugin</artifactId>
-					<version>1.0.3</version>
+					<version>1.0.4</version>
 				</dependency>
 			</dependencies>
 			<configuration>
