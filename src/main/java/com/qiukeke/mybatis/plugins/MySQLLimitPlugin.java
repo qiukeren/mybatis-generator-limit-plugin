@@ -113,7 +113,7 @@ public class MySQLLimitPlugin extends PluginAdapter {
             "                tmp = tmp + \" offset \" + example.getOffset().toString();\n" +
             "            }\n" +
             "        }\n" +
-            "        return SQL() + tmp;";
+            "        return sql.toString() + tmp;";
         lines.add(line);
 
         return true;
