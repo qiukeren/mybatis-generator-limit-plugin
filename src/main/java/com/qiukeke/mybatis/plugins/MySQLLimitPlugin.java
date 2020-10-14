@@ -64,6 +64,12 @@ public class MySQLLimitPlugin extends PluginAdapter {
         getOffset.addBodyLine("return offset;");
         topLevelClass.addMethod(getOffset);
 
+        for (Method method : topLevelClass.getMethods()) {
+            if ("clear".equals(method.getName())) {
+                method.addBodyLine("offset = null;");
+                method.addBodyLine("limit = null;");
+            }
+        }
         return true;
     }
 
